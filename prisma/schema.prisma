@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Lotes {
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  value        Int
+  label        String
+  price        Float
+  size         String
+  phase        Int
+  situation    String
+  reservedBy   String?
+  reservedFor  String?
+  reservedDate DateTime? @default(now())
+}
