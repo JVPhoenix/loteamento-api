@@ -8,14 +8,15 @@ datasource db {
 }
 
 model Lotes {
-  id           String    @id @default(auto()) @map("_id") @db.ObjectId
-  value        Int
-  label        String
-  price        Float
-  size         String
-  phase        Int
-  situation    String
-  reservedBy   String?
-  reservedFor  String?
-  reservedDate DateTime? @default(now())
+  id                 String    @id @default(auto()) @map("_id") @db.ObjectId
+  value              Int
+  label              String
+  price              Float
+  size               String
+  phase              Int
+  situation          String
+  reservedBy         String?
+  reservedFor        String?
+  reservedForContact String?
+  reservedDate       DateTime? @default(now())
 }

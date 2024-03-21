@@ -10,6 +10,7 @@ interface UpdateLotesServiceInterface {
   situation: string;
   reservedBy?: string;
   reservedFor?: string;
+  reservedForContact?: string;
   reservedDate?: Date;
 }
 
@@ -42,6 +43,7 @@ class UpdateLotesService {
         situation: props.situation,
         reservedBy: props.reservedBy,
         reservedFor: props.reservedFor,
+        reservedForContact: props.reservedForContact,
         reservedDate: props.reservedDate,
       },
     });

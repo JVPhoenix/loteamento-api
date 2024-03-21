@@ -8,10 +8,6 @@ export type LoteServiceType = {
   situation: string;
   reservedBy?: string;
   reservedFor?: string;
+  reservedForContact?: string;
   reservedDate?: Date;
 };
-
-export enum LotesStatus {
-  Free = "livre",
-  Blocked = "bloqueado",
-}
