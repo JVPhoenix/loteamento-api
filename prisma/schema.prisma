@@ -18,5 +18,5 @@ model Lotes {
   reservedBy         String?
   reservedFor        String?
   reservedForContact String?
-  reservedDate       DateTime? @default(now())
+  reservedDate       DateTime?
 }
