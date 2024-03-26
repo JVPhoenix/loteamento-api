@@ -18,5 +18,6 @@ model Lotes {
   reservedBy         String?
   reservedFor        String?
   reservedForContact String?
+  reservedURL        String
   reservedDate       DateTime?
 }
