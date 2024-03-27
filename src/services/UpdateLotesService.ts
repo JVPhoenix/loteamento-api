@@ -45,7 +45,6 @@ class UpdateLotesService {
         reservedBy: props.reservedBy,
         reservedFor: props.reservedFor,
         reservedForContact: props.reservedForContact,
-        reservedURL: props.reservedURL,
         reservedDate: props.reservedDate,
       },
     });
