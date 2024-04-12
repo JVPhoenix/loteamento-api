@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import DeleteLotesService from "../services/DeleteLotesService";
+import DeleteLotesService from "../../services/lotes-services/DeleteLotesService";
 
 class DeleteLotesController {
   async handle(request: FastifyRequest, reply: FastifyReply) {

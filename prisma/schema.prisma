@@ -8,7 +8,7 @@ datasource db {
 }
 
 model Lotes {
-  id                 String    @id @default(auto()) @map("_id") @db.ObjectId
+  id                 String  @id @default(auto()) @map("_id") @db.ObjectId
   value              Int
   label              String
   price              Float
@@ -19,4 +19,24 @@ model Lotes {
   reservedFor        String?
   reservedForContact String?
   reservedDate       String?
+}
+
+model Clients {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  name           String
+  cpf            String
+  birth          String
+  adress         String
+  phone          String
+  contractNumber String
+  phase          Int
+  lote           String
+  dimension      String
+  price          Float
+  plan           Int
+  startDate      String
+  paymentList    String[] @default([""])
+  standard       Boolean  @default(true)
+  entrance       Float?
+  obs            String?
 }

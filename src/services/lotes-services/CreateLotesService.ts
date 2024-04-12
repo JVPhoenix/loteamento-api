@@ -1,5 +1,5 @@
-import prismaClient from "../prisma";
-import { LoteServiceType } from "../types";
+import prismaClient from "../../prisma";
+import { LoteServiceType } from "../../types";
 
 class CreateLotesService {
   async execute(props: LoteServiceType) {

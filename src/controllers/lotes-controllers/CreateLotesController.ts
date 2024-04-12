@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import CreateLotesService from "../services/CreateLotesService";
-import { LoteServiceType } from "../types";
+import CreateLotesService from "../../services/lotes-services/CreateLotesService";
+import { LoteServiceType } from "../../types";
 
 class CreateLotesController {
   async handle(request: FastifyRequest, reply: FastifyReply) {

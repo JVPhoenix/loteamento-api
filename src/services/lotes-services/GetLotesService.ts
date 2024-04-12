@@ -1,6 +1,6 @@
-import prismaClient from "../prisma";
+import prismaClient from "../../prisma";
 
-class ListLotesService {
+class GetLotesService {
   async execute() {
     const lotes = await prismaClient.lotes.findMany();
 
@@ -8,4 +8,4 @@ class ListLotesService {
   }
 }
 
-export default ListLotesService;
+export default GetLotesService;

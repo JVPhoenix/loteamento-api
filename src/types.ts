@@ -9,5 +9,25 @@ export type LoteServiceType = {
   reservedBy?: string;
   reservedFor?: string;
   reservedForContact?: string;
-  reservedDate?: Date;
+  reservedDate?: string;
+};
+
+export type ClientsServiceType = {
+  id: string;
+  name: string;
+  cpf: string;
+  birth: string;
+  adress: string;
+  phone: string;
+  contractNumber: string;
+  phase: number;
+  lote: string;
+  dimension: string;
+  price: number;
+  plan: number;
+  startDate: string;
+  paymentList: string[];
+  standard: boolean;
+  entrance?: number;
+  obs?: string;
 };

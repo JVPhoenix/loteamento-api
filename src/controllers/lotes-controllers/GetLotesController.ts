@@ -1,9 +1,9 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import ListLotesService from "../services/ListLotesService";
+import GetLotesService from "../../services/lotes-services/GetLotesService";
 
-class ListLotesController {
+class GetLotesController {
   async handle(request: FastifyRequest, reply: FastifyReply) {
-    const lotesService = new ListLotesService();
+    const lotesService = new GetLotesService();
 
     const lotes = await lotesService.execute();
 
@@ -11,4 +11,4 @@ class ListLotesController {
   }
 }
 
-export default ListLotesController;
+export default GetLotesController;

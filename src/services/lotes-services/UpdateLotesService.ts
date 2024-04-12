@@ -1,4 +1,4 @@
-import prismaClient from "../prisma";
+import prismaClient from "../../prisma";
 
 interface UpdateLotesServiceInterface {
   id: string;
@@ -11,8 +11,7 @@ interface UpdateLotesServiceInterface {
   reservedBy?: string;
   reservedFor?: string;
   reservedForContact?: string;
-  reservedURL: string;
-  reservedDate?: Date;
+  reservedDate?: string;
 }
 
 class UpdateLotesService {
