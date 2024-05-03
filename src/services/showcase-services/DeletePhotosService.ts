@@ -1,32 +1,32 @@
 import prismaClient from "../../prisma";
 
-interface DeleteClientsServiceInterface {
+interface DeletePhotosServiceInterface {
   id: string;
 }
 
-class DeleteClientsService {
-  async execute(props: DeleteClientsServiceInterface) {
+class DeletePhotosService {
+  async execute(props: DeletePhotosServiceInterface) {
     if (!props.id) {
       throw new Error("Solicitação Inválida");
     }
 
-    const findClient = await prismaClient.clients.findFirst({
+    const findPhotos = await prismaClient.photos.findFirst({
       where: {
         id: props.id,
       },
     });
 
-    if (!findClient) {
+    if (!findPhotos) {
       throw new Error("Cliente não existe!");
     }
 
-    await prismaClient.clients.delete({
+    await prismaClient.photos.delete({
       where: {
-        id: findClient.id,
+        id: findPhotos.id,
       },
     });
     return "Deletado com sucesso";
   }
 }
 
-export default DeleteClientsService
+export default DeletePhotosService;

@@ -7,6 +7,10 @@ import GetClientsController from "./controllers/client-controllers/GetClientsCon
 import CreateClientsController from "./controllers/client-controllers/CreateClientsController";
 import DeleteClientsController from "./controllers/client-controllers/DeleteClientsController";
 import UpdateClientController from "./controllers/client-controllers/UpdateClientsController";
+import CreatePhotosController from "./controllers/photos-controllers/CreatePhotosController";
+import GetPhotosController from "./controllers/photos-controllers/GetPhotosController";
+import DeletePhotosController from "./controllers/photos-controllers/DeletePhotosController";
+import UpdatePhotosController from "./controllers/photos-controllers/UpdatePhotosController";
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
   // ------- LOTES ROUTES
@@ -43,5 +47,23 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
 
   fastify.put("/clientsData", async (request: FastifyRequest, reply: FastifyReply) => {
     return new UpdateClientController().handle(request, reply);
+  });
+
+  // ------ PHOTOS ROUTES
+
+  fastify.get("/photosData", async (request: FastifyRequest, reply: FastifyReply) => {
+    return new GetPhotosController().handle(request, reply);
+  });
+
+  fastify.post("/photosData", async (request: FastifyRequest, reply: FastifyReply) => {
+    return new CreatePhotosController().handle(request, reply);
+  });
+
+  fastify.delete("/photosData", async (request: FastifyRequest, reply: FastifyReply) => {
+    return new DeletePhotosController().handle(request, reply);
+  });
+
+  fastify.put("/photosData", async (request: FastifyRequest, reply: FastifyReply) => {
+    return new UpdatePhotosController().handle(request, reply);
   });
 }

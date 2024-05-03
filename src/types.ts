@@ -31,3 +31,12 @@ export type ClientsServiceType = {
   entrance?: number;
   obs?: string;
 };
+
+export type PhotosServiceType = {
+  id: string;
+  url: string;
+  type: string;
+  phase: number;
+  width?: number;
+  height?: number;
+};

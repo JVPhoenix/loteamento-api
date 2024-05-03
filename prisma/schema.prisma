@@ -40,3 +40,12 @@ model Clients {
   entrance       Float?
   obs            String?
 }
+
+model Photos {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  url    String
+  type   String
+  phase  Int
+  width  Int?
+  height Int?
+}

@@ -6,9 +6,9 @@ class DeleteClientsController {
     const data = request.body as { id: string };
 
     const clientService = new DeleteClientsService();
-    const lotes = await clientService.execute(data);
+    const clients = await clientService.execute(data);
 
-    reply.send(lotes);
+    reply.send(clients);
   }
 }
 
