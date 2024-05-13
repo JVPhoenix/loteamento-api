@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { PhotosServiceType } from "../../types";
-import UpdatePhotosService from "../../services/showcase-services/UpdatePhotosService";
+import UpdatePhotosService from "../../services/photos-services/UpdatePhotosService";
 
 class UpdatePhotosController {
   async handle(request: FastifyRequest, reply: FastifyReply) {

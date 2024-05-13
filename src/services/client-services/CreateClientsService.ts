@@ -12,7 +12,7 @@ class CreateClientsService {
         name: props.name,
         cpf: props.cpf,
         birth: props.birth,
-        adress: props.adress,
+        address: props.address,
         phone: props.phone,
         contractNumber: props.contractNumber,
         phase: props.phase,

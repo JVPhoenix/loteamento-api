@@ -26,7 +26,7 @@ model Clients {
   name           String
   cpf            String
   birth          String
-  adress         String
+  address        String
   phone          String
   contractNumber String
   phase          Int
@@ -43,6 +43,7 @@ model Clients {
 
 model Photos {
   id     String @id @default(auto()) @map("_id") @db.ObjectId
+  value  Int
   url    String
   type   String
   phase  Int

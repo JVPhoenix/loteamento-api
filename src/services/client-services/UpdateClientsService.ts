@@ -5,7 +5,7 @@ interface UpdateClientServiceInterface {
   name: string;
   cpf: string;
   birth: string;
-  adress: string;
+  address: string;
   phone: string;
   contractNumber: string;
   phase: number;
@@ -44,7 +44,7 @@ class UpdateClientService {
         name: props.name,
         cpf: props.cpf,
         birth: props.birth,
-        adress: props.adress,
+        address: props.address,
         phone: props.phone,
         contractNumber: props.contractNumber,
         phase: props.phase,

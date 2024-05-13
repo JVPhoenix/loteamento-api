@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import DeletePhotosService from "../../services/showcase-services/DeletePhotosService";
+import DeletePhotosService from "../../services/photos-services/DeletePhotosService";
 
 class DeletePhotosController {
   async handle(request: FastifyRequest, reply: FastifyReply) {

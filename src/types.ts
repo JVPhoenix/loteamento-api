@@ -17,7 +17,7 @@ export type ClientsServiceType = {
   name: string;
   cpf: string;
   birth: string;
-  adress: string;
+  address: string;
   phone: string;
   contractNumber: string;
   phase: number;
@@ -34,6 +34,7 @@ export type ClientsServiceType = {
 
 export type PhotosServiceType = {
   id: string;
+  value: number;
   url: string;
   type: string;
   phase: number;

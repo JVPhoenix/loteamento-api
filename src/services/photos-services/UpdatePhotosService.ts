@@ -2,6 +2,7 @@ import prismaClient from "../../prisma";
 
 interface UpdatePhotosServiceInterface {
   id: string;
+  value: number;
   url: string;
   type: string;
   phase: number;
@@ -30,6 +31,7 @@ class UpdatePhotosService {
         id: findPhotos.id,
       },
       data: {
+        value: props.value,
         url: props.url,
         type: props.type,
         phase: props.phase,
