@@ -23,6 +23,7 @@ class CreateClientsService {
         startDate: props.startDate,
         paymentList: props.paymentList,
         standard: props.standard,
+        obs: props.obs
       },
     });
 
