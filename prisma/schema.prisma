@@ -50,3 +50,24 @@ model Photos {
   width  Int?
   height Int?
 }
+
+model ClientRequest {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  requestType    String
+  name           String
+  cpf            String
+  birth          String
+  address        String
+  phone          String
+  contractNumber String
+  phase          Int
+  lote           String
+  dimension      String
+  price          Float
+  plan           Int
+  startDate      String
+  paymentList    String[] @default([""])
+  standard       Boolean  @default(true)
+  entrance       Float?
+  obs            String?
+}
