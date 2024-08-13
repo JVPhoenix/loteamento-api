@@ -1,9 +1,9 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import GetClientService from "../../services/client-services/GetClientsService";
+import GetClientsService from "../../services/clients-services/GetClientsService";
 
 class GetClientsController {
   async handle(request: FastifyRequest, reply: FastifyReply) {
-    const clientService = new GetClientService();
+    const clientService = new GetClientsService();
 
     const clients = await clientService.execute();
 

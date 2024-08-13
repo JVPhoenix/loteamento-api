@@ -19,6 +19,7 @@ export type ClientsServiceType = {
   birth: string;
   address: string;
   phone: string;
+  digitalContract: string;
   contractNumber: string;
   phase: number;
   lote: string;
@@ -40,4 +41,26 @@ export type PhotosServiceType = {
   phase: number;
   width?: number;
   height?: number;
+};
+
+export type ClientsRequestServiceType = {
+  id: string;
+  requestType: string;
+  name: string;
+  cpf: string;
+  birth: string;
+  address: string;
+  phone: string;
+  digitalContract: string;
+  contractNumber: string;
+  phase: number;
+  lote: string;
+  dimension: string;
+  price: number;
+  plan: number;
+  startDate: string;
+  paymentList: string[];
+  standard: boolean;
+  entrance?: number;
+  obs?: string;
 };

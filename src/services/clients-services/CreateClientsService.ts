@@ -14,6 +14,7 @@ class CreateClientsService {
         birth: props.birth,
         address: props.address,
         phone: props.phone,
+        digitalContract: props.digitalContract,
         contractNumber: props.contractNumber,
         phase: props.phase,
         lote: props.lote,
@@ -24,7 +25,7 @@ class CreateClientsService {
         paymentList: props.paymentList,
         standard: props.standard,
         entrance: props.entrance,
-        obs: props.obs
+        obs: props.obs,
       },
     });
 

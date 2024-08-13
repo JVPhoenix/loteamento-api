@@ -3,14 +3,18 @@ import CreateLotesController from "./controllers/lotes-controllers/CreateLotesCo
 import GetLotesController from "./controllers/lotes-controllers/GetLotesController";
 import DeleteLotesController from "./controllers/lotes-controllers/DeleteLotesController";
 import UpdateLotesController from "./controllers/lotes-controllers/UpdateLotesController";
-import GetClientsController from "./controllers/client-controllers/GetClientsController";
-import CreateClientsController from "./controllers/client-controllers/CreateClientsController";
-import DeleteClientsController from "./controllers/client-controllers/DeleteClientsController";
-import UpdateClientController from "./controllers/client-controllers/UpdateClientsController";
+import GetClientsController from "./controllers/clients-controllers/GetClientsController";
+import CreateClientsController from "./controllers/clients-controllers/CreateClientsController";
+import DeleteClientsController from "./controllers/clients-controllers/DeleteClientsController";
+import UpdateClientController from "./controllers/clients-controllers/UpdateClientsController";
 import CreatePhotosController from "./controllers/photos-controllers/CreatePhotosController";
 import GetPhotosController from "./controllers/photos-controllers/GetPhotosController";
 import DeletePhotosController from "./controllers/photos-controllers/DeletePhotosController";
 import UpdatePhotosController from "./controllers/photos-controllers/UpdatePhotosController";
+import GetClientsRequestController from "./controllers/clientsRequest-controllers/GetClientsRequestController";
+import CreateClientsRequestController from "./controllers/clientsRequest-controllers/CreateClientsRequestController";
+import DeleteClientsRequestController from "./controllers/clientsRequest-controllers/DeleteClientsRequestController";
+import UpdateClientRequestController from "./controllers/clientsRequest-controllers/UpdateClientsRequestController";
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
   // ------- LOTES ROUTES
@@ -65,5 +69,23 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
 
   fastify.put("/photosData", async (request: FastifyRequest, reply: FastifyReply) => {
     return new UpdatePhotosController().handle(request, reply);
+  });
+
+  // ------ CLIENTS REQUESTS ROUTES
+
+  fastify.get("/clientsRequestData", async (request: FastifyRequest, reply: FastifyReply) => {
+    return new GetClientsRequestController().handle(request, reply);
+  });
+
+  fastify.post("/clientsRequestData", async (request: FastifyRequest, reply: FastifyReply) => {
+    return new CreateClientsRequestController().handle(request, reply);
+  });
+
+  fastify.delete("/clientsRequestData", async (request: FastifyRequest, reply: FastifyReply) => {
+    return new DeleteClientsRequestController().handle(request, reply);
+  });
+
+  fastify.put("/clientsRequestData", async (request: FastifyRequest, reply: FastifyReply) => {
+    return new UpdateClientRequestController().handle(request, reply);
   });
 }

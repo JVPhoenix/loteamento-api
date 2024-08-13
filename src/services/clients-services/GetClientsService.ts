@@ -1,6 +1,6 @@
 import prismaClient from "../../prisma";
 
-class GetClientService {
+class GetClientsService {
   async execute() {
     const clients = await prismaClient.clients.findMany();
 
@@ -8,4 +8,4 @@ class GetClientService {
   }
 }
 
-export default GetClientService;
+export default GetClientsService;
