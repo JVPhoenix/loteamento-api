@@ -28,7 +28,7 @@ model Clients {
   birth           String
   address         String
   phone           String
-  digitalContract String
+  digitalContract String   @default("")
   contractNumber  String
   phase           Int
   lote            String
@@ -60,7 +60,7 @@ model ClientsRequest {
   birth           String
   address         String
   phone           String
-  digitalContract String
+  digitalContract String   @default("")
   contractNumber  String
   phase           Int
   lote            String
