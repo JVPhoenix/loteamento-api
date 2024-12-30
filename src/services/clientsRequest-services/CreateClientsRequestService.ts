@@ -27,6 +27,7 @@ class CreateClientsRequestService {
         standard: props.standard,
         entrance: props.entrance,
         obs: props.obs,
+        status: props.status,
       },
     });
 

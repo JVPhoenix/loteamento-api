@@ -19,6 +19,7 @@ interface UpdateClientsServiceInterface {
   standard: boolean;
   entrance?: number;
   obs?: string;
+  status: boolean;
 }
 
 class UpdateClientsService {
@@ -59,6 +60,7 @@ class UpdateClientsService {
         standard: props.standard,
         entrance: props.entrance,
         obs: props.obs,
+        status: props.status,
       },
     });
     return updateClient;

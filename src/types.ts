@@ -31,6 +31,7 @@ export type ClientsServiceType = {
   standard: boolean;
   entrance?: number;
   obs?: string;
+  status: boolean;
 };
 
 export type PhotosServiceType = {
@@ -63,4 +64,5 @@ export type ClientsRequestServiceType = {
   standard: boolean;
   entrance?: number;
   obs?: string;
+  status: boolean;
 };

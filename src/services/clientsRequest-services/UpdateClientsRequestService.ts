@@ -8,7 +8,7 @@ interface UpdateClientsRequestServiceInterface {
   birth: string;
   address: string;
   phone: string;
-  virtualContract: string;
+  digitalContract: string;
   contractNumber: string;
   phase: number;
   lote: string;
@@ -20,6 +20,7 @@ interface UpdateClientsRequestServiceInterface {
   standard: boolean;
   entrance?: number;
   obs?: string;
+  status: boolean;
 }
 
 class UpdateClientsRequestService {
@@ -49,7 +50,7 @@ class UpdateClientsRequestService {
         birth: props.birth,
         address: props.address,
         phone: props.phone,
-        digitalContract: props.virtualContract,
+        digitalContract: props.digitalContract,
         contractNumber: props.contractNumber,
         phase: props.phase,
         lote: props.lote,
@@ -61,6 +62,7 @@ class UpdateClientsRequestService {
         standard: props.standard,
         entrance: props.entrance,
         obs: props.obs,
+        status: props.status,
       },
     });
     return updateClient;
