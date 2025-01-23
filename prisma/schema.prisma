@@ -40,7 +40,7 @@ model Clients {
   standard        Boolean  @default(true)
   entrance        Float?
   obs             String?
-  status          Boolean
+  status          Boolean? @default(true)
 }
 
 model Photos {
@@ -73,5 +73,5 @@ model ClientsRequest {
   standard        Boolean  @default(true)
   entrance        Float?
   obs             String?
-  status          Boolean?  @default(true)
+  status          Boolean? @default(true)
 }
