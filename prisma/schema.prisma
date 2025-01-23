@@ -73,5 +73,5 @@ model ClientsRequest {
   standard        Boolean  @default(true)
   entrance        Float?
   obs             String?
-  status          Boolean
+  status          Boolean  @default(true)
 }
